@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5f7c26b208d27e049d03efa6"},"username":"dwfw","password":"$2b$10$rOFRQ.vkUrbmmtwhOJsDwO4RK7Iowp98QbbNAvKe2dGxtGkPP7A7S","createdAt":{"$date":"2020-10-06T08:11:30.028Z"},"updatedAt":{"$date":"2020-10-06T08:11:30.028Z"},"__v":0}
+{"_id":{"$oid":"5f7c26d608d27e049d03efa7"},"username":"Damian","password":"$2b$10$8s6D0RzRVqE5skcPKshCbOq6s5G1NVa7/yvIGfmkybuPYRo0w1nPq","createdAt":{"$date":"2020-10-06T08:12:06.533Z"},"updatedAt":{"$date":"2020-10-06T08:12:06.533Z"},"__v":0}
+{"_id":{"$oid":"5f7c275008d27e049d03efa8"},"username":"vaf","password":"$2b$10$57ruA7a70n69ZHD0x.1iT..pxgJhdpkBzcAxJie4nmsYbiMYuFuHi","createdAt":{"$date":"2020-10-06T08:14:08.068Z"},"updatedAt":{"$date":"2020-10-06T08:14:08.068Z"},"__v":0}

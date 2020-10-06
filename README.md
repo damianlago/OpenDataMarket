@@ -1,6 +1,7 @@
 # OpenDataMarket
 
 Back-End Routes:
+
 | Method | Path | Description |
 | ------------- | ------------- |
 | Get  | /api/users  | All users |
@@ -10,6 +11,7 @@ Back-End Routes:
 
 
 Fron-End Routes:
+
 | Path | Component | Description |
 | ------------- | ------------- |
 | /       | Index  | Homepage View and graph selector |
@@ -17,6 +19,7 @@ Fron-End Routes:
 
 
 Components:
+
 src
 ├── service
 │   └── ...services.js
