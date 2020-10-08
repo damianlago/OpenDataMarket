@@ -5,6 +5,7 @@ export default class CategoryService {
     constructor() {
         this.api = axios.create({
             baseURL: process.env.REACT_APP_API_URL,
+            withCredentials: true
         })
         // this.state = {
         //     categories: []

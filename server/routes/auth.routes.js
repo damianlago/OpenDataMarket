@@ -85,6 +85,7 @@ router.post('/login', (req, res, next) => {
 });
 
 
+
 router.post('/logout', (req, res, next) => {
     req.logout();
     res.status(200).json({ message: 'Log out success!' });

@@ -26,7 +26,7 @@ class Signup extends Component {
                 this.props.setTheUser(response.data)
                 this.props.history.push('/')
             })
-            .catch(err => console.log('Erroooooor:', { err }))
+            .catch(err => console.log('Error:', { err }))
     }
 
 
@@ -36,13 +36,13 @@ class Signup extends Component {
             <>
                 <form onSubmit={this.handleFormSubmit}>
 
-                    <label name="username">Nombre de usuario</label>
+                    <label name="username">Username</label>
                     <input type="text" name="username" value={this.state.username} onChange={this.handleInputChange} />
 
-                    <label name="password">Contraseña</label>
+                    <label name="password">Password</label>
                     <input type="password" name="password" value={this.state.password} onChange={this.handleInputChange} />
 
-                    <button type="submit">Register</button>
+                    <button type="submit">Signup</button>
                 </form>
             </>
         )

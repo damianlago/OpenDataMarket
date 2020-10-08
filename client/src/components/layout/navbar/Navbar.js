@@ -20,10 +20,10 @@ export default class extends Component {
     render() {
         return (
             <>
-                <Link to="/">Home</Link>
-                {!this.props.loggedInUser && <Link to="/signup">Register</Link>}
-                {!this.props.loggedInUser && <Link to="/login">Log-in</Link>}
-                {this.props.loggedInUser && <div onClick={this.logoutUser}>Log-out</div>}
+                <Link to="/">Home</Link> <br></br>
+                {!this.props.loggedInUser && <Link to="/signup">Register</Link>} <br></br>
+                {!this.props.loggedInUser && <Link to="/login">Log in</Link>} <br></br>
+                {this.props.loggedInUser && <Link onClick={this.logoutUser}>Log out</Link>}
             </>
         )
     }
