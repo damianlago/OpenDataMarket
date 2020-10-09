@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import DataVisualizer from '../dynamic/DataVisualizer'
-
+import DynamicIndex from '../dynamic/DynamicIndex'
 
 class Index extends Component {
     constructor() {
@@ -24,8 +23,8 @@ class Index extends Component {
                     <h1>Title</h1>
                     <h3>Subtitle</h3>
                     <p>Description</p>
-                    <DataVisualizer />
                 </div>
+                <DynamicIndex />
             </>
         )
     }
