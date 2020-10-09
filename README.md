@@ -4,10 +4,9 @@ Back-End Routes:
 
 | Method | Path | Description |
 | ------------- | ------------- |
-| Get  | /api/users  | All users |
-| Get  | /api/users/:id  | Specific user |
-| Post | /api/users/logged | Autheticated the user and record session |
-| Delete | /api/users/logout | Log out from the current user session |
+| Get  | /api/:id  | Specific user |
+| Post | /api/login | Autheticated the user and record session |
+| Delete | /api/logout | Log out from the current user session |
 
 
 Fron-End Routes:
