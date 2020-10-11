@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import SupermarketFilter from './filters/SupermarketFltr'
 import Default from './filters/Default'
 
+import Form from 'react-bootstrap/Form'
+import Container from 'react-bootstrap/esm/Container';
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 class DynamicIndex extends Component {
     constructor(props) {
@@ -18,68 +22,30 @@ class DynamicIndex extends Component {
     }
 
     render() {
-        console.log(typeof (this.state.value))
         return (
             <>
-                <select onChange={this.handleDropdownChange}>
-                    <option value="0">Choose Data Source</option>
-                    <option value="1">Supermarket Products and Prices</option>
-                    <option value="2">...data sources</option>
-                </select>
+                <Container className="justify-content-center">
+                    <Row className="justify-content-center">
+                        <Col md={{ span: 5 }}>
 
-                {/* add message for users before render filters */}
-                <div>Selected: {this.state.value}</div>
-                {(!this.state.value) && <Default />}
-                {(this.state.value === '1') && <SupermarketFilter />}
+                            <Form.Control as="select" onChange={this.handleDropdownChange} >
+                                <option value="0">Choose Data Source</option>
+                                <option value="1">Supermarket Products and Prices</option>
+                            </Form.Control>
+
+                            {/* add message for users before render filters */}
+
+                            {(!this.state.value) && <Default />}
+                            {(this.state.value === '1') && <SupermarketFilter />}
+
+                        </Col>
+                    </Row>
+                </Container>
             </>
         );
     }
 
 
-
-    // class DataSource extends Component {
-    //     constructor(props) {
-    //         super(props);
-    //         this.state = {
-    //             value: "0"
-    //         }
-    //         this.handleDropdownChange = this.handleDropdownChange.bind(this);
-    //     }
-
-    //     handleDropdownChange(e) {
-    //         this.setState({ value: e.target.value });
-    //     }
-
-    //     render() {
-    //         console.log(this.state.value)
-    //         return (
-    //             <>
-    //                 <select value={this.state.value} onChange={this.handleDropdownChange}>
-    //                     <option value="0" disabled>Choose Data Source</option>
-    //                     <option value="1">Supermarket Products and Prices</option>
-    //                     <option value="2" >...data sources</option>
-    //                 </select>
-
-    //                 {/* add message for users before render filters */}
-    //                 <div>Selected: {this.state.value}</div>
-    //                 {(this.setState.value === 1) ? <OneDS /> : null}
-
-    //             </>
-    //         );
-    //     }
-
-
-
-    //     constructor(props) {
-    //         super(props);
-    //         this.state = {
-    //             value: '0'
-    //         };
-    //     }
-
-    //     render() {
-    //         console.log(this.state.value)
-    //         return (
     //             <select value={this.state.value} onChange={(e) => { this.setState({ value: e.target.value }) }}>
     //                 <option value='0' disabled>Select Data Source</option>
     //                 {
@@ -88,8 +54,6 @@ class DynamicIndex extends Component {
     //                     })
     //                 }
     //             </select>
-    //         );
-    //     }
 }
 
 export default DynamicIndex

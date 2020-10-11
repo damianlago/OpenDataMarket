@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import NavbarBrand from 'react-bootstrap/esm/NavbarBrand'
+
 import authService from './../../../service/auth.service'
+
 
 export default class extends Component {
 
@@ -20,10 +25,18 @@ export default class extends Component {
     render() {
         return (
             <>
-                <Link to="/">Home</Link> <br></br>
-                {!this.props.loggedInUser && <Link to="/signup">Register</Link>} <br></br>
-                {!this.props.loggedInUser && <Link to="/login">Log in</Link>} <br></br>
-                {this.props.loggedInUser && <Link onClick={this.logoutUser}>Log out</Link>}
+                <Navbar bg="light">
+                    <NavbarBrand>
+                        <Link to="/">LOGO</Link>
+                    </NavbarBrand>
+                    <Nav className="ml-auto">
+                        <Nav.Item>
+                            {/* {!this.props.loggedInUser && <Link to="/signup">Register</Link>} */}
+                            {!this.props.loggedInUser && <Link to="/login">Log in</Link>}
+                            {this.props.loggedInUser && <Link onClick={this.logoutUser}>Log out</Link>}
+                        </Nav.Item>
+                    </Nav>
+                </Navbar>
             </>
         )
     }
