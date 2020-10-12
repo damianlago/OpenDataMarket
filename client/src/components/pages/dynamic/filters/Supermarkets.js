@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Form from 'react-bootstrap/Form'
-
+// import { ResponsiveBar } from '@nivo/bar'
 
 class Supermarkets extends Component {
 
@@ -10,7 +10,8 @@ class Supermarkets extends Component {
             data: [],
             isLoaded: false,
             supermarket: "",
-            category: ""
+            category: "",
+            products: []
         }
         this.apiData = []
         this.handleSupermarketChange = this.handleSupermarketChange.bind(this);
@@ -18,7 +19,7 @@ class Supermarkets extends Component {
     }
 
     fetchData() {
-        fetch("http://18.157.253.218:3000/api/v1/retail/categories")
+        fetch("/api/v1/retail/categories")
             .then(res => res.json())
             .then(
                 (result) => {
@@ -53,31 +54,30 @@ class Supermarkets extends Component {
         });
     }
 
-
-    // fetchProducts() {
-    //     const res = fetch("http://18.157.253.218:3000/api/v1/retail/products", {
-    //         method: "POST",
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             'Access-Control-Allow-Origin': '*'
-    //         },
-    //         body: JSON.stringify({
-    //             'supermarket': 'mercadona-es',
-    //             'category': 'aceite_especias_y_salsas_aceite_vinagre_y_sal'
-    //         })
-    //     })
-    //         .then((response) => response.json())
-    //         .then((data) => {
-    //             this.setState({
-    //                 products: data
-    //             })
-    //         })
-    //     return res
-    // }
+    fetchProducts() {
+        const res = fetch("/api/v1/retail/products", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                supermarket: 'carrefour-es',
+                category: 'el_mercado_carniceria_preparados_y_arreglos_de_carne',
+            }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                this.setState({
+                    products: data,
+                });
+            })
+            .catch((err) => console.log("ERROR", err));
+        return res
+    }
 
     componentDidMount() {
         this.fetchData()
-        // this.fetchProducts()
+        this.fetchProducts()
     }
 
     render() {
@@ -94,12 +94,34 @@ class Supermarkets extends Component {
                     ))}
                 </Form.Control>
 
-                {(this.state.supermarket) &&
+                {/* {  < div style={{ height: 500 }}>
+                    <ResponsiveBar
+                        data={this.state.data}
+                        // keys={'category'}
+                        indexBy={this.state.data.map(elm => elm.supermarket)}
+                        margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+                        padding={0.3}
+                        colors={{ scheme: 'nivo' }} />
+                </div>} */}
+
+                {
+                    (this.state.supermarket) &&
                     <Form.Control as="select" onChange={this.handleCategoryChange} >
                         <option value="0">Choose Category</option>
                         {categories.map(elm => (
                             <option key={elm.category} value={elm.category}>
                                 {elm.category}
+                            </option>
+                        ))}
+                    </Form.Control>
+                }
+                {
+                    (this.state.products) &&
+                    <Form.Control as="select">
+                        <option value="0">Choose Product</option>
+                        {this.state.products.map(elm => (
+                            <option key={elm.id} value={elm.name}>
+                                {elm.name}
                             </option>
                         ))}
                     </Form.Control>

@@ -1,24 +1,38 @@
-import axios from 'axios'
+// import axios from 'axios'
 
-export default class SupermarketService {
+// export default class SupermarketService {
 
-    constructor() {
-        this.api = axios.create({
-            baseURL: process.env.REACT_APP_API_URL,
-            withCredentials: true
-        })
-        // this.state = {
-        //     SupermarketsData: []
-        // }
-    }
+//     constructor() {
+//         this.api = axios.create({
+//             baseURL: process.env.REACT_APP_API_URL,
+//             withCredentials: true
+//         })
+//         this.state = {
+//             data: [],
+//             isLoaded: false,
+//         }
+//         this.apiData = []
+//     }
 
-    // categoriesMercadona = () => {
-    //     fetch('http://18.157.253.218:3000/api/v1/retail/categories?supermarket=mercadona-es')
-    //         .then(response => response.json())
-    //         .then((data) => this.setState({ SupermarketsData: data }))
-    // }
-    // async getOptions() {
-    //     const res = await axios.get('http://18.157.253.218:3000/api/v1/retail/categories')
-    //     const data = res.data
-    // }
-}
+
+//     fetchData() {
+//         fetch("http://18.157.253.218:3000/api/v1/retail/categories")
+//             .then(res => res.json())
+//             .then(
+//                 (result) => {
+//                     this.apiData = result;
+//                     this.setState({
+//                         isLoaded: true,
+//                         data: result
+//                     });
+//                 },
+//             )
+//     }
+
+
+//     componentDidMount() {
+//         this.fetchData()
+//     }
+
+// }
+

@@ -8,7 +8,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 
-class DynamicIndex extends Component {
+class DataSources extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -47,4 +47,4 @@ class DynamicIndex extends Component {
 }
 
 
-export default DynamicIndex
+export default DataSources
