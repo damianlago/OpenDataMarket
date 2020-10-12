@@ -5,7 +5,7 @@ export default class extends Component {
 
     render() {
         return (
-            <footer><p>{new Date().getFullYear()} All rights reserved.</p></footer>
+            <footer><p>{new Date().getFullYear()}&copy; Open Data Market</p></footer>
         )
     }
 }

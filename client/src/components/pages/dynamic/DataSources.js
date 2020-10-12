@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import SupermarketFilter from './filters/SupermarketFltr'
-import Default from './filters/Default'
+import Supermarkets from './filters/Supermarkets'
+import Default from './Default'
 
 import Form from 'react-bootstrap/Form'
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+
 
 class DynamicIndex extends Component {
     constructor(props) {
@@ -33,10 +34,9 @@ class DynamicIndex extends Component {
                                 <option value="1">Supermarket Products and Prices</option>
                             </Form.Control>
 
-                            {/* add message for users before render filters */}
+                            {(!this.state.value) && <Default />} {/* add message for users before render filters */}
 
-                            {(!this.state.value) && <Default />}
-                            {(this.state.value === '1') && <SupermarketFilter />}
+                            {(this.state.value === '1') && <Supermarkets />}
 
                         </Col>
                     </Row>
@@ -44,16 +44,7 @@ class DynamicIndex extends Component {
             </>
         );
     }
-
-
-    //             <select value={this.state.value} onChange={(e) => { this.setState({ value: e.target.value }) }}>
-    //                 <option value='0' disabled>Select Data Source</option>
-    //                 {
-    //                     ['Supermarkets producst and categories', 2].map((i, j) => {
-    //                         return <option key={i} value={i}>{i}</option>
-    //                     })
-    //                 }
-    //             </select>
 }
+
 
 export default DynamicIndex
