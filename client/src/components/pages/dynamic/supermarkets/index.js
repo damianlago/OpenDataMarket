@@ -5,6 +5,7 @@ import Graphs from './Graphs'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import Button from 'react-bootstrap/Button'
 
 
 class Supermarkets extends Component {
@@ -99,12 +100,12 @@ class Supermarkets extends Component {
 
         return (
             <>
-                <Container>
+                <Container className="mainWrapper">
                     <Row>
                         <Col md={4}>
                             <Filter handleSupermarketChange={this.handleSupermarketChange} supermarkets={supermarkets} supermarket={this.state.supermarket} handleCategoryChange={this.handleCategoryChange} categories={this.state.categories} category={this.state.category} handleProductChange={this.handleProductChange} products={this.state.products} />
                         </Col>
-                        <Col md={8} className="background">
+                        <Col md={8}>
                             <Graphs supermarket={this.state.supermarket} category={this.state.category} categories={this.state.categories} carrefourCat={carrefourCat} diaCat={diaCat} mercadonaCat={mercadonaCat} products={this.state.products} />
                         </Col>
                     </Row>

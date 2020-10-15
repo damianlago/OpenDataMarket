@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col'
 const Filter = ({ handleSupermarketChange, supermarkets, supermarket, handleCategoryChange, categories, category, handleProductChange, products }) => {
     return (
         <>
-            <Form.Control className="filtersSelect" as="select" onChange={handleSupermarketChange} >
+            <Form.Control className="mt-3 mb-3 selectStyle" as="select" onChange={handleSupermarketChange} >
                 <option value="0">Choose Supermarket</option>
                 {supermarkets.map(elm => (
                     <option key={elm.supermarket} value={elm.supermarket}>
@@ -19,7 +19,7 @@ const Filter = ({ handleSupermarketChange, supermarkets, supermarket, handleCate
 
             {
                 (supermarket) &&
-                <Form.Control className="filtersSelect" as="select" onChange={handleCategoryChange} >
+                <Form.Control className="mt-3 mb-3 selectStyle" as="select" onChange={handleCategoryChange} >
                     <option value="0">Choose Category</option>
                     {categories.map(elm => (
                         <option key={elm.category} value={elm.category}>
@@ -31,7 +31,7 @@ const Filter = ({ handleSupermarketChange, supermarkets, supermarket, handleCate
 
             {
                 (category) &&
-                <Form.Control className="filtersSelect" as="select" onChange={handleProductChange}>
+                <Form.Control className="mt-3 mb-3 selectStyle" as="select" onChange={handleProductChange}>
                     <option value="0">Choose Product</option>
                     {products.map(elm => (
                         <option key={elm.id} value={elm.name}>
