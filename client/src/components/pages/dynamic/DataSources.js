@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Supermarkets from './filters/Supermarkets'
+import Supermarkets from './supermarkets'
 import Default from './Default'
 
 import Container from 'react-bootstrap/esm/Container';
@@ -18,14 +18,14 @@ class DataSources extends Component {
         };
 
         this.showComponent = this.showComponent.bind(this);
-        this.handleDropdownChange = this.handleDropdownChange.bind(this)
+        // this.handleDropdownChange = this.handleDropdownChange.bind(this)
     }
 
-    handleDropdownChange(e) {
-        this.setState({
-            value: e.target.value
-        })
-    }
+    // handleDropdownChange(e) {
+    //     this.setState({
+    //         value: e.target.value
+    //     })
+    // }
 
     showComponent(e) {
         this.setState({ showComponent: true });
@@ -35,7 +35,7 @@ class DataSources extends Component {
         console.log(this.state.showComponent)
         return (
             <>
-
+                {/* 
                 <Form.Control className="filters" as="select" onChange={this.handleDropdownChange} >
                     <option value="0">Choose Data Source</option>
                     <option value="1">Supermarket Products and Prices</option>
@@ -45,11 +45,12 @@ class DataSources extends Component {
                 }
                 {
                     (this.state.value === '1') && <Supermarkets />
-                }
-
-                {/* <Button variant="primary" onClick={this.showComponent}>Supermarkets</Button>
-                <Button variant="primary" disabled>Disabled</Button>
-                <Button variant="primary" disabled>Disabled</Button> */}
+                } */}
+                <Container>
+                    <Button className="buttonDS" variant="primary" onClick={this.showComponent}>Supermarkets</Button>
+                    <Button className="buttonDS" variant="primary" disabled>Disabled</Button>
+                    <Button className="buttonDS" variant="primary" disabled>Disabled</Button>
+                </Container>
                 {this.state.showComponent ? <Supermarkets /> : null}
             </>
         )

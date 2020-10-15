@@ -10,6 +10,8 @@ import Signup from "./pages/singup/Singup";
 
 import authService from './../service/auth.service'
 
+import Container from 'react-bootstrap/esm/Container';
+
 import './App.css';
 
 class App extends Component {
