@@ -41,32 +41,25 @@ class Login extends Component {
 
         return (
             <>
-                <Container>
-                    <main>
-                        <Row className="justify-content-center">
-                            <Col md={{ span: 5 }}>
-                                <Form onSubmit={this.handleFormSubmit}>
+                <h1>Login</h1>
+                <Container className="login">
+                    <Row className="justify-content-center">
+                        <Col md={{ span: 5 }}>
+                            <Form onSubmit={this.handleFormSubmit}>
+                                <Form.Group>
+                                    <Form.Label name="username">Username</Form.Label>
+                                    <Form.Control type="text" name="username" value={this.state.username} onChange={this.handleInputChange} placeholder="Username" />
+                                </Form.Group>
 
-                                    <Form.Group>
-                                        <Form.Label name="username">Username:</Form.Label>
-                                        <Form.Control type="text" name="username" value={this.state.username} onChange={this.handleInputChange} placeholder="Username" />
-                                    </Form.Group>
+                                <Form.Group>
+                                    <Form.Label name="password">Password</Form.Label>
+                                    <Form.Control type="password" name="password" value={this.state.password} onChange={this.handleInputChange} placeholder="Password" />
+                                </Form.Group>
+                                <Button className="loginBtn" variant="primary" type="submit">Log in</Button>
 
-                                    <Form.Group>
-                                        <Form.Label name="password">Password:</Form.Label>
-                                        <Form.Control type="password" name="password" value={this.state.password} onChange={this.handleInputChange} placeholder="Password" />
-                                    </Form.Group>
-
-                                    <Form.Group controlId="formBasicCheckbox">
-                                        <Form.Check type="checkbox" label="Accept terms and conditions." />
-                                    </Form.Group>
-
-                                    <Button variant="dark" type="submit">Log in</Button>
-
-                                </Form>
-                            </Col>
-                        </Row>
-                    </main>
+                            </Form>
+                        </Col>
+                    </Row>
                 </Container>
             </>
         )

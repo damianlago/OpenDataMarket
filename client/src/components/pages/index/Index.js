@@ -29,15 +29,15 @@ class Index extends Component {
                 <Container className="mainWrapper">
                     <Row>
                         <Col md={12}>
-                            <h1>OpenData Market</h1>
-                            <h3>Lore ipsum text lore ipsum text lore...</h3>
-                            <Form.Control className="filters" as="select" onChange={this.handleDropdownChange} >
-                                <option value="0">Choose Data Source</option>
-                                <option value="1">Supermarket Products and Prices</option>
+                            <h4>Information dashboard tool that analyzes and displays data in graphs.</h4>
+
+                            <Form.Control className="datasources mt-3" as="select" onChange={this.handleDropdownChange} >
+                                <option value="0">Supermarket Categories and Products &hellip;</option>
+                                <option value="1" disabled>Data Sources..</option>
                             </Form.Control>
 
                             {
-                                (this.state.value === '1') && <Supermarkets />
+                                ((!this.state.value) || this.state.value === '0') && <Supermarkets />
                             }
                         </Col>
                     </Row>

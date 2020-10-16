@@ -1,28 +1,48 @@
+
 .mainWrapper{
     width: 100%;
     height: 100%;
-    /* margin-left: 15px; */
 }
 
-h1, h3 {
+h4 {
   text-align: center;
+  margin-bottom: 15px;
+}
+
+.datasources {
+  width: 100%;
+}
+
+.graphStyle {
+  width: 85%;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
 }
 
 .selectStyle {
   width: 85%;
 }
 
-.staticGraph {
-  margin-top: 2px;
+.productStyle {
+  width: 85%;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
 }
 
-hr{ 
-  
-    border:         none;
-    border-left:    1px solid hsla(200, 10%, 50%,100);
-    height:         100%;
-    width:          1px;       
+.staticGraph {
+  margin-top: 5px;
 }
+
+.login {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.loginBtn {
+  width: 80%;
+}
+
+
 
 
 

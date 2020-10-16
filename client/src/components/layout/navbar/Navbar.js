@@ -27,7 +27,7 @@ export default class extends Component {
             <>
                 <Navbar bg="light">
                     <NavbarBrand>
-                        <Link to="/">LOGO</Link>
+                        <Link to="/">Open Data Market</Link>
                     </NavbarBrand>
                     <Nav className="ml-auto">
                         <Nav.Item>
