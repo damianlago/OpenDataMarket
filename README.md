@@ -1,5 +1,13 @@
 # OpenDataMarket
 
+## Getting started
+This will launch the website in your localhost server.
+```c
+$ git clone https://github.com/damianlago/libft.git
+$ cd client
+$ npm start
+```
+
 ### Back-End Routes:
 
 | Method | Path | Description |
