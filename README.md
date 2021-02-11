@@ -1,6 +1,6 @@
 # OpenDataMarket
 
-Back-End Routes:
+### Back-End Routes:
 
 | Method | Path | Description |
 | --- | --- | --- |
@@ -9,7 +9,7 @@ Back-End Routes:
 | Delete | /api/logout | Log out from the current user session |
 
 
-Fron-End Routes:
+### Fron-End Routes:
 
 | Path | Component | Description |
 | --- | --- | --- |
@@ -17,7 +17,7 @@ Fron-End Routes:
 | /login  | Login  | Log-in Page View |
 
 
-Components:
+### Components:
 ```bash
 src
 ├── service
