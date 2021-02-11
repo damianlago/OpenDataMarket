@@ -3,7 +3,7 @@
 Back-End Routes:
 
 | Method | Path | Description |
-| ------------- | ------------- |
+| --- | --- | --- |
 | Get  | /api/:id  | Specific user |
 | Post | /api/login | Autheticated the user and record session |
 | Delete | /api/logout | Log out from the current user session |
@@ -12,7 +12,7 @@ Back-End Routes:
 Fron-End Routes:
 
 | Path | Component | Description |
-| ------------- | ------------- |
+| --- | --- | --- |
 | /       | Index  | Homepage View and graph selector |
 | /login  | Login  | Log-in Page View |
 
