@@ -1,6 +1,6 @@
 # OpenDataMarket
 
-This dashboard represents in the form of graphs, data obtained in real time from a rest Api.
+This dashboard represents in the form of graphs, data obtained from a rest Api.
 
 ## Getting started
 This will launch the website in your localhost server.
